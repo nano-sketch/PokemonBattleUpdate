@@ -8,10 +8,9 @@ numID2 = random.randint(1, 898)
 pName = input("Enter your name: ")
 
 # Open the CSV file for pokemon ID
-with open('Pokemon.csv', mode='r') as file:
+with open("pokemon.csv", mode='r') as file:
     reader = csv.DictReader(file)
-    
-    found = False  # check if the Pokémon found
+    found = False
     for row in reader:
         # find pokemon number from numID
         if row["number"] == str(numID):
@@ -27,18 +26,16 @@ with open('Pokemon.csv', mode='r') as file:
             p1_speed = row["speed"]
             p1_generation = row["generation"]
             p1_legendary = row["legendary"]
+            print(p1_name)
             found = True
             break
-    
     if not found:
         print("error pokemon id1 not found!")
+        
 
-
-# Open the CSV file for pokemon ID
-with open('Pokemon.csv', mode='r') as file:
+with open("pokemon.csv", mode='r') as file:
     reader = csv.DictReader(file)
-    
-    found = False  # check if the Pokémon found
+    found = False
     for row in reader:
         # find pokemon number from numID
         if row["number"] == str(numID2):
@@ -54,14 +51,12 @@ with open('Pokemon.csv', mode='r') as file:
             p2_speed = row["speed"]
             p2_generation = row["generation"]
             p2_legendary = row["legendary"]
+            print(p2_name)
             found = True
             break
-    
     if not found:
         print("error pokemon id2 not found!")
 
-
 ##Main##
 
-
-        
+input("wait")
