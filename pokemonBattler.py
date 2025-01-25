@@ -1,5 +1,8 @@
 import csv
 import random
+import os
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+print(os.getcwd())
 
 # Random Pokemon ID
 numID = random.randint(1, 898)
@@ -26,9 +29,9 @@ with open("pokemon.csv", mode='r') as file:
             p1_speed = row["speed"]
             p1_generation = row["generation"]
             p1_legendary = row["legendary"]
-            print(p1_name)
             found = True
             break
+            
     if not found:
         print("error pokemon id1 not found!")
         
@@ -51,12 +54,13 @@ with open("pokemon.csv", mode='r') as file:
             p2_speed = row["speed"]
             p2_generation = row["generation"]
             p2_legendary = row["legendary"]
-            print(p2_name)
             found = True
             break
+            
     if not found:
         print("error pokemon id2 not found!")
 
 ##Main##
-
+print("your pokemon is:",p1_name)
+print("Your enemies pokemon is:",p2_name)
 input("wait")
